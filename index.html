@@ -1,18 +1,291 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      
+      <!---Painting--->
+      <a-box position="0 1.75 -3" rotation="0 0 0" color="#28282B"></a-box>
+      <a-box
+        position=".15 1.95 -3"
+        rotation="0 0 0"
+        width=".75"
+        height=".8"
+        depth="1.25"
+        animation="property: position; to: 0.15 1.95 -2.7; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#B53737"
+      ></a-box>
+      <a-box
+        position=".46 1.45 -3"
+        rotation="0 0 0"
+        width=".11"
+        height=".1"
+        depth="1.25"
+        animation="property: position; to: 0.46 1.45 -2.8; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#EBECF0"
+      ></a-box>
+      <a-box
+        position=".07 1.35 -3"
+        rotation="0 0 0"
+        width=".6"
+        height=".3"
+        depth="1.25"
+        animation="property: position; to: 0.07 1.35 -2.85; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#EBECF0"
+      ></a-box>
+      <a-box
+        position=".46 1.27 -3"
+        rotation="0 0 0"
+        width=".11"
+        height=".2"
+        depth="1.25"
+        animation="property: position; to: 0.46 1.27 -2.6; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#FFCD01"
+      ></a-box>
+      <a-box
+        position="-.4 1.35 -3"
+        rotation="0 0 0"
+        width=".3"
+        height=".4"
+        depth="1.25"
+        animation="property: position; to: -.4 1.35 -2.7; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#1520A6"
+      ></a-box>
+      <a-box
+        position="-.4 1.74 -3"
+        rotation="0 0 0"
+        width=".25"
+        height=".35"
+        depth="1.25"
+        animation="property: position; to: -.4 1.74 -2.87; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#EBECF0"
+      ></a-box>
+      <a-box
+        position="-.42 2.1 -3"
+        rotation="0 0 0"
+        width=".3"
+        height=".3"
+        depth="1.25"
+        animation="property: position; to: -.42 2.1 -2.75; 
+             dur: 2000; easing: linear; loop: true; dir: alternate"
+        color="#EBECF0"
+      ></a-box>
+
+      <!--Person-->
+      <a-entity
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/14-girl-obj.rar?v=1664558875985"
+        position="0 0 -4"
+        rotation="0 0 0"
+        width="6"
+        height="6"
+      ></a-entity>
+
+      <!-- Experiment with lighting
+      <a-entity 
+        light="type: ambient; color: #f3edff"
+      ></a-entity>
+      <a-entity
+        light="type: hemisphere; color: #FFF; intensity: 0.2" position="-0.5 1 1"
+      ></a-entity> 
+      Delete if not using before submitting-->
+      
+      <!--Doors-->
+      <a-entity
+        position="2 1.5 2.9"
+        rotation="0 0 0"
+        <a-animation
+        animation="property: rotation; to: 0 -90 0;
+        dur: 3000; easing: linear; loop: true; dir: alternate"
+        ></a-animation>
+        <a-box
+        src="https://cdn.glitch.global/9da719ca-4cff-4349-a0d8-033bb0421365/marcel-strauss-E7DsoC0mcpw-unsplash.jpg?v=1664566533397"
+        position="-1 0 0"
+        rotation="0 0 0"
+        width="2"
+        height="3"
+        depth="0.2"
+        color="#875f44"
+        animation="property: rotation; to: 0 0 0;
+        dur: 3000; easing: linear; loop: true; dir: alternate"
+        ></a-box>
+      </a-entity>
+      
+      <a-entity
+        position="-2 1.5 2.9"
+        rotation="0 0 0"
+        <a-animation
+        animation="property: rotation; to: 0 90 0;
+        dur: 3000; easing: linear; loop: true; dir: alternate"
+        ></a-animation>
+        <a-box
+        src="https://cdn.glitch.global/9da719ca-4cff-4349-a0d8-033bb0421365/marcel-strauss-E7DsoC0mcpw-unsplash.jpg?v=1664566533397"
+        position="1 0 0"
+        rotation="0 0 0"
+        width="2"
+        height="3"
+        depth="0.2"
+        color="#875f44"
+        animation="property: rotation; to: 0 0 0;
+        dur: 3000; easing: linear; loop: true; dir: alternate"
+        ></a-box>
+      </a-entity>
+
+      <!---Walls--->
+      
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/sides.jpeg?v=1664561423362"
+        position="-3 2 -2"
+        rotation="0 90 0"
+        width="10"
+        height="4"
+        color="#C2AC99"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/sides.jpeg?v=1664561423362"
+        position="3 2 -2"
+        rotation="0 -90 0"
+        width="10"
+        height="4"
+        color="#C2AC99"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/sides.jpeg?v=1664561423362"
+        position="0 2 -7"
+        rotation="0 0 0"
+        width="6"
+        height="4"
+        color="#C2AC99"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        position="-3 2 -2"
+        rotation="0 270 0"
+        width="10"
+        height="4"
+        color="#C2AC99"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        position="3 2 -2"
+        rotation="0 -270 0"
+        width="10"
+        height="4"
+        color="#C2AC99"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        position="0 2 -7"
+        rotation="0 180 0"
+        width="6"
+        height="4"
+        color="#C2AC99"
+      ></a-plane>
+
+      <!--Floor and Ceiling -->
+      <a-image
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/floor.jpeg?v=1664561719893"
+        position="0 0 -2"
+        rotation="-90 0 0"
+        width="6"
+        height="10"
+      ></a-image>
+      <a-image
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/ceiling.jpeg?v=1664561195779"
+        position="0 4 -2"
+        rotation="-90 0 0"
+        width="6"
+        height="10"
+      ></a-image>
+
+      <!--Door Frame-->
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        color="#F3E0CF"
+        position="-2.5 1.5 3"
+        width="1"
+        height="3"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        color="#F3E0CF"        
+        position="2.5 1.5 3"
+        width="1"
+        height="3"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/Screen%20Shot%202022-09-30%20at%204.31.56%20PM.png?v=1664569940109"
+        color="#F3E0CF"
+        position="-1.5 3.5 3"
+        width="3.01"
+        height="1"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/Screen%20Shot%202022-09-30%20at%204.31.56%20PM.png?v=1664569940109"
+        color="#F3E0CF"
+        position="1.5 3.5 3"
+        width="3.01"
+        height="1"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        color="#F3E0CF"
+        rotation="0 180 0"       
+        position="-2.5 1.5 3"
+        width="1"
+        height="3"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/wall%20maybe.jpeg?v=1664569787830"
+        color="#F3E0CF"        
+        rotation="0 180 0"
+        position="2.5 1.5 3"
+        width="1"
+        height="3"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/Screen%20Shot%202022-09-30%20at%204.31.56%20PM.png?v=1664569940109"
+        color="#F3E0CF"
+        rotation="0 180 0"
+        position="-1.5 3.5 3"
+        width="3.01"
+        height="1"
+      ></a-plane>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/Screen%20Shot%202022-09-30%20at%204.31.56%20PM.png?v=1664569940109"
+        color="#F3E0CF"
+        rotation="0 180 0"
+        position="1.5 3.5 3"
+        width="3.01"
+        height="1"
+      ></a-plane>
+
+
+      <a-sky 
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/sky.jpeg?v=1664567921070"
+        color="#F3E0CF"
+      ></a-sky>
+      <a-plane
+        src="https://cdn.glitch.global/7ac948d6-0b4e-4ec4-ad23-6b4a87a984f0/grass3.jpeg?v=1664589018147"
+        rotation="-90 0 0"
+        position="0 -.1 0"
+        width="25"
+        height="25"
+      ></a-plane>
+
+      <!-- Camera -->
+      <a-entity position="0 0 8">
+          <a-camera></a-camera>
+      </a-entity>
+
     </a-scene>
   </body>
 </html>
+
